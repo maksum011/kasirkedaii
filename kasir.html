@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasir Mini</title>
+  <link rel="stylesheet" href="kasir.css" />
+</head>
+<body>
+  <div class="kasir-container">
+    <header>
+      <h1>Kasir Kedai</h1>
+      <div>
+        <button id="resetLaporan" class="btn danger">Reset Laporan</button>
+        <button id="logoutBtn" class="btn logout">Logout</button>
+      </div>
+    </header>
+
+    <section class="input-section">
+      <h2>Tambah Produk</h2>
+      <div class="form-group">
+        <input type="text" id="namaProduk" placeholder="Nama produk" />
+        <input type="number" id="hargaProduk" placeholder="Harga" />
+        <input type="number" id="jumlahProduk" placeholder="Jumlah" />
+        <button id="tambahBtn" class="btn">Tambah</button>
+      </div>
+    </section>
+
+    <section class="daftar-section">
+      <h2>Daftar Pembelian</h2>
+      <table id="tabelBelanja">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Produk</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="total">
+        <h3>Total Pembelian: Rp <span id="totalHarga">0</span></h3>
+        <button id="cetakStruk" class="btn success">🧾 Cetak Struk</button>
+      </div>
+    </section>
+
+    <section class="laporan-section">
+      <h2>Laporan Harian</h2>
+      <p>Total Transaksi Hari Ini: <b id="totalTransaksi">0</b></p>
+      <p>Total Keuntungan: Rp <b id="totalKeuntungan">0</b></p>
+    </section>
+
+    <div id="modalStruk" class="modal">
+      <div class="modal-content">
+        <h2>🧾 Struk Pembelian</h2>
+        <pre id="isiStruk"></pre>
+        <button id="tutupStruk" class="btn">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="kasir.js"></script>
+</body>
+</html>
